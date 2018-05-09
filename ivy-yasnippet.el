@@ -2,12 +2,35 @@
 
 ;;
 ;; Author: Michał Kondraciuk <k.michal@zoho.com>
+;; URL: https://github.com/mkcms/ivy-yasnippet
+;; Package-Requires: ((emacs "25.3") (ivy "0.10.0") (yasnippet "0.12.2") (dash "2.14.1"))
 ;; Version: 0.0.1
-;; Keywords: convenience, tools
+;; Keywords: convenience
+
+;; Copyright (C) 2018 Michał Kondraciuk
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 ;;
-;; Preview yasnippets with ivy
+;; This package allows you to select yasnippet snippets using ivy completion.
+;; When current selection changes in the minibuffer, the snippet contents
+;; are temporarily expanded in the buffer.
+;;
+;; To use it, call M-x ivy-yasnippet (but make sure you have enabled
+;; `yas-minor-mode' first).
+;;
 
 ;;; Code:
 
