@@ -14,7 +14,6 @@
 (require 'ivy)
 (require 'yasnippet)
 (require 'dash)
-(require 'dash-functional)
 
 (defvar ivy-yasnippet--buffer nil)
 (defvar ivy-yasnippet--template-alist nil)
@@ -174,7 +173,8 @@ During expansion, `name` is bound to whatever was returned by `ivy-read'."
       (setq candidates
 	    (-map #'car
 		  (-flatten
-		   (-map (-partial #'-sort (-on #'string-lessp #'car))
+		   (-map (-partial #'-sort (lambda (a b)
+					     (string-lessp (car a) (car b))))
 			 (-separate
 			  (-lambda ((_ . template))
 			    (memq template templates-for-key-at-point))
