@@ -93,13 +93,6 @@ During expansion, `name` is bound to whatever was returned by `ivy-read'."
   "Face used for keys that match whatever is before point."
   :group 'ivy-yasnippet)
 
-(defcustom ivy-yasnippet-mode-map
-  (let ((map (make-keymap)))
-    (define-key map [remap yas-insert-snippet] #'ivy-yasnippet)
-    map)
-  "Keymap used in `ivy-yasnippet-mode'."
-  :group 'ivy-yasnippet)
-
 (defun ivy-yasnippet--lookup-template (name)
   (cdr (assoc name ivy-yasnippet--template-alist)))
 
