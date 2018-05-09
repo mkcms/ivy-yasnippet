@@ -164,6 +164,15 @@ During expansion, `name` is bound to whatever was returned by `ivy-read'."
 
 ;;;###autoload
 (defun ivy-yasnippet ()
+  "Read a snippet name from the minibuffer and expand it at point.
+The completion is done using `ivy-read'.
+
+In the minibuffer, each time selection changes, the selected
+snippet is temporarily expanded at point for preview.
+
+If text before point matches snippet key of any candidate, that
+candidate will be initially selected, unless variable
+`ivy-yasnippet-expand-keys' is set to nil."
   (interactive)
   (let* ((ivy-yasnippet--buffer (current-buffer))
 
