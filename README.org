@@ -1,0 +1,58 @@
+* ivy-yasnippet.el
+
+  Emacs package that lets you preview yasnippet snippets with ivy.
+
+* Table of contents                                                     :TOC:
+- [[#ivy-yasnippetel][ivy-yasnippet.el]]
+- [[#installation][Installation]]
+  - [[#manual][Manual]]
+- [[#usage][Usage]]
+- [[#options][Options]]
+- [[#license][License]]
+
+* Installation
+** Manual
+   Install dash, ivy and yasnippet, then put path to file
+   ~ivy-yasnippet.el~ somewhere in your ~load-path~.
+* Usage
+  To use it, call ~ivy-yasnippet~ in ~yas-minor-mode~.
+
+* Options							 :noexport_1:
+** ~ivy-yasnippet-expand-keys~
+   Value that says how to expand keys before point.
+   - If it's nil, never expand keys.
+   - If it's the symbol ~always~, always try to expand keys.
+   - If it's the symbol ~smart~, expand when a matching candidate is
+     selected for the first time.  Once a candidate whose key doesn't
+     match whatever is before point is selected, behave like nil until
+     the minibuffer exits.
+
+   Default value is ~smart~.
+
+** ~ivy-yasnippet-create-snippet-if-not-matched~
+   If non-nil, allow exiting the minibuffer without exact match.
+   Doing so will pop up a new buffer for writing a snippet.
+
+** ~ivy-yasnippet-new-snippet~
+   Snippet to expand when creating new snippet.
+   During expansion, ~name~ is bound to whatever was returned by ~ivy-read~.
+
+** ~ivy-yasnippet-key~
+   Face used for keys.
+
+** ~ivy-yasnippet-key-matching~
+   Face used for keys that match whatever is before point.
+
+* License
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
