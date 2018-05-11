@@ -2,6 +2,8 @@
 
   Emacs package that lets you preview yasnippet snippets with ivy.
 
+  [[./demo.gif]]
+
 * Table of contents                                                     :TOC:
 - [[#ivy-yasnippetel][ivy-yasnippet.el]]
 - [[#installation][Installation]]
