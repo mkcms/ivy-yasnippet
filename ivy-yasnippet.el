@@ -126,7 +126,9 @@ During expansion, `name` is bound to whatever was returned by `ivy-read'."
    (t
     (setq ivy-yasnippet--should-delete-key
 	  (eq ivy-yasnippet-expand-keys 'always))))
-  (yas-expand-snippet template))
+  (yas-expand-snippet (yas--template-content template)
+		      nil nil
+		      (yas--template-expand-env template)))
 
 (defun ivy-yasnippet--preview (template)
   (with-current-buffer ivy-yasnippet--buffer
