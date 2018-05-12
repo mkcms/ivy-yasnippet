@@ -1,4 +1,5 @@
 * ivy-yasnippet.el
+  [[https://melpa.org/#/ivy-yasnippet][file:https://melpa.org/packages/ivy-yasnippet-badge.svg]]
 
   Emacs package that lets you preview yasnippet snippets with ivy.
 
@@ -7,12 +8,15 @@
 * Table of contents                                                     :TOC:
 - [[#ivy-yasnippetel][ivy-yasnippet.el]]
 - [[#installation][Installation]]
+  - [[#from-melpa][From melpa]]
   - [[#manual][Manual]]
 - [[#usage][Usage]]
 - [[#options][Options]]
 - [[#license][License]]
 
 * Installation
+** From melpa
+    Use ~M-x package-install RET ivy-yasnippet RET~ to install this package from MELPA.
 ** Manual
    Install dash, ivy and yasnippet, then put path to file
    ~ivy-yasnippet.el~ somewhere in your ~load-path~.
