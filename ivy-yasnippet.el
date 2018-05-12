@@ -150,7 +150,9 @@ During expansion, `name` is bound to whatever was returned by `ivy-read'."
   (let* ((candidate (ivy-state-current ivy-last))
 	 (template (ivy-yasnippet--lookup-template candidate)))
     (when template
-      (ivy-yasnippet--preview template))))
+      (condition-case-unless-debug err
+	  (ivy-yasnippet--preview template)
+	(error (warn "ivy-yasnippet--update-fn: %S" err))))))
 
 (defun ivy-yasnippet--visit-snippet-action (template-name)
   (let ((inhibit-read-only t))
