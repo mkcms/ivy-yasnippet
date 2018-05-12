@@ -84,12 +84,12 @@ During expansion, `name` is bound to whatever was returned by `ivy-read'."
   :type 'string)
 
 (defface ivy-yasnippet-key
-  '((t . (:foreground "#ff8c00")))
+  '((t . (:inherit font-lock-type-face)))
   "Face used for keys."
   :group 'ivy-yasnippet)
 
 (defface ivy-yasnippet-key-matching
-  '((t . (:foreground "yellow" :inherit ivy-yasnippet-key :weight bold)))
+  '((t . (:inherit ivy-yasnippet-key :weight bold)))
   "Face used for keys that match whatever is before point."
   :group 'ivy-yasnippet)
 
@@ -245,7 +245,7 @@ candidate will be initially selected, unless variable
 	 (key (yas--template-key template)))
     (if key
 	(concat template-name
-		(propertize (concat " [" key "]")
+		" " (propertize (concat "[" key "]")
 			    'face
 			    (if (and (string-equal key ivy-yasnippet--key)
 				     ivy-yasnippet--should-delete-key)
