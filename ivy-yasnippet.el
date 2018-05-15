@@ -172,6 +172,9 @@ If text before point matches snippet key of any candidate, that
 candidate will be initially selected, unless variable
 `ivy-yasnippet-expand-keys' is set to nil."
   (interactive)
+  (barf-if-buffer-read-only)
+  (unless yas-minor-mode
+    (error "yas-minor-mode not enabled in current buffer"))
   (let* ((ivy-yasnippet--buffer (current-buffer))
 
 	 (ivy-yasnippet--region
