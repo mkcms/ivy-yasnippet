@@ -1,13 +1,13 @@
 ;;; ivy-yasnippet.el --- Preview yasnippets with ivy
 
 ;;
-;; Author: Michał Kondraciuk <k.michal@zoho.com>
+;; Author: Michał Krzywkowski <k.michal@zoho.com>
 ;; URL: https://github.com/mkcms/ivy-yasnippet
 ;; Package-Requires: ((emacs "24") (ivy "0.10.0") (yasnippet "0.12.2") (dash "2.14.1") (cl-lib))
 ;; Version: 0.0.1
 ;; Keywords: convenience
 
-;; Copyright (C) 2018 Michał Kondraciuk
+;; Copyright (C) 2018 Michał Krzywkowski
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
