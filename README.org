@@ -1,5 +1,3 @@
-*ARCHIVED*: I don't use yasnippet anymore, so I will no longer
- maintain this package.
 * ivy-yasnippet.el
   [[https://melpa.org/#/ivy-yasnippet][file:https://melpa.org/packages/ivy-yasnippet-badge.svg]]
 
