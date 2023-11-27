@@ -174,9 +174,7 @@ candidate will be initially selected, unless variable
   (barf-if-buffer-read-only)
   (unless yas-minor-mode
     (error "`yas-minor-mode' not enabled in current buffer"))
-  (let* ((ivy-yasnippet--buffer (current-buffer))
-
-	 (ivy-yasnippet--region
+  (let* ((ivy-yasnippet--region
 	  (if (region-active-p)
 	      (cons (region-beginning) (region-end))
 	    (cons (point) (point))))
@@ -201,7 +199,8 @@ candidate will be initially selected, unless variable
 	 (modified-flag (buffer-modified-p))
 
 	 candidates selection)
-    (let ((buffer-undo-list t))
+    (let ((ivy-yasnippet--buffer (current-buffer))
+          (buffer-undo-list t))
       (setq candidates
 	    (-map #'car
 		  (-flatten
@@ -233,7 +232,7 @@ candidate will be initially selected, unless variable
 	(set-buffer-modified-p modified-flag)))
     (when selection
       (let ((template (ivy-yasnippet--lookup-template selection)))
-	(if template
+        (if template
 	    (ivy-yasnippet--expand-template template)
 	  (setq template ivy-yasnippet-new-snippet)
 	  (yas-new-snippet t)
@@ -242,7 +241,7 @@ candidate will be initially selected, unless variable
 	     template nil nil
 	     `((name ,selection)
 	       (yas-selected-text
-		,ivy-yasnippet--region-contents)))))))))
+	        ,ivy-yasnippet--region-contents)))))))))
 
 (defun ivy-yasnippet-transformer (template-name)
   (let* ((template (ivy-yasnippet--lookup-template template-name))
